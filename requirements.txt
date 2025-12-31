@@ -1,0 +1,9 @@
+pandas
+numpy
+scikit-learn
+scipy
+bcrypt
+fastapi
+uvicorn
+pydantic
+sqlalchemy

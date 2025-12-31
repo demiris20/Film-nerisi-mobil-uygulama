@@ -1,0 +1,18 @@
+# Large files
+film_oneri.tar
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+env/
+venv/
+.env
+
+# Node
+node_modules/
+npm-debug.log
+
+# System
+Thumbs.db
+.DS_Store
