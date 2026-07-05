@@ -1,6 +1,6 @@
 # Film Öneri Sistemi - Proje Anlatım Rehberi
 
-Bu belge, geliştirdiğiniz film öneri sisteminin nasıl çalıştığını, teknik detaylarını ve kullanıcı akışını, projeyi hiç bilmeyen birine anlatmak için hazırlanmıştır. Sunum sırasında gelebilecek sorular için de "Soru-Cevap" bölümü eklenmiştir.
+Bu belge, geliştirdiğimiz film öneri sisteminin nasıl çalıştığını, teknik detaylarını ve kullanıcı akışını, projeyi hiç bilmeyen birine anlatmak için hazırlanmıştır. Sunum sırasında gelebilecek sorular için de "Soru-Cevap" bölümü eklenmiştir.
 
 ---
 
@@ -41,7 +41,7 @@ Bir kullanıcı uygulamayı açtığında neler olur?
 
 ---
 
-## 4. Teknik Detaylar ve Yapay Zeka (Burası Önemli)
+## 4. Teknik Detaylar ve Yapay Zeka
 
 Birisi "Peki arkada nasıl bir zeka var?" derse anlatılacak kısım burasıdır. Sistemimiz **"Hibrit Öneri Modeli"** kullanır. Bu, iki farklı teknolojinin güçlerini birleştirir:
 
@@ -55,7 +55,7 @@ Birisi "Peki arkada nasıl bir zeka var?" derse anlatılacak kısım burasıdır
 *   **Nasıl Çalışır:** Filmlerin açıklamalarını, türlerini ve kadrosunu analiz eder.
 *   **Avantajı:** Yeni çıkan veya az kişinin izlediği filmleri bile özelliklerine bakarak önerebilir.
 
-### C. Hibrit Model (Bizim Yaptığımız)
+### C. Hibrit Model
 *   Biz bu iki sistemin skorlarını birleştiriyoruz. Hem topluluğun zevkini hem de filmin içeriğini hesaba katıyoruz.
 *   **Formülümüz:** `Genel Skor = (SVD Skoru * Ağırlık) + (İçerik Skoru * Ağırlık) + (Popülerlik)`
 
@@ -81,12 +81,12 @@ Birisi "Peki arkada nasıl bir zeka var?" derse anlatılacak kısım burasıdır
 *   **Genel Analiz:** Yapay zeka modellerinin başarı oranlarını (doğruluk payını) grafiklerle görürüz.
 *   **Inspector (Canlı İnceleme):** Bir kullanıcının ID'sini girip, sistemin ona NEDEN o filmi önerdiğini (SVD puanı kaç, İçerik puanı kaç?) detaylıca inceleyebiliriz.
 
-**Soru 5: Bu proje gerçek hayatta ölçeklenebilir mi? (Örn: 1 milyon kullanıcı olsa)**
+**Soru 5: Bu proje gerçek hayatta ölçeklenebilir mi? **
 **Cevap:** Şu anki yapımız prototip aşamasında yerel dosyalar (CSV) ve hafif veritabanı (SQLite) kullanıyor. 1 milyon kullanıcı için veritabanını PostgreSQL gibi daha güçlü bir sisteme, yapay zeka modellerini de anlık hesaplama yerine önceden hesaplanmış (pre-computed) bir yapıya (örneğin Redis önbelleği) geçirmemiz gerekir. Mimari buna uygundur.
 
 ---
 
-## 6. Projenin Dosya Yapısı (Özet)
+## 6. Projenin Dosya Yapısı 
 
 *   **`src/screens` (Mobil):** Uygulamanın sayfaları (Giriş, Anket, Anasayfa).
 *   **`api.py` (Sunucu):** İstekleri karşılayan kapı.
